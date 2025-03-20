@@ -4,7 +4,7 @@ module.exports = (req, res) => {
     const parsedUrl = url.parse(req.url, true);
     const query = parsedUrl.query;
 
-    if (parsedUrl.pathname === "/sakib/candles") {
+    if (parsedUrl.pathname === "/candles") {
         const pair = query.pair || "USDBDT_otc";
         const time = query.time || new Date().toISOString().slice(11, 16);
         const timezone = query.timezone || "UTC: +06:00";
